@@ -11,12 +11,12 @@ class Calculator: #Завд №1
         # Запитуємо користувача про введення чисел і оператора
         try:
             self.num1 = float(input("Введіть перше число: ")) # Завд №3 введення 2-ох значеннь та оператор
-            self.operator = input("Введіть операцію (+, -, *, /, ^, √, %): ") 
-            if self.operator not in ('+', '-', '*', '/', '^', '√', '%'): # Завд №4 + №9
+            self.operator = input("Введіть операцію (+, -, *, /, ^, sq, %): ") 
+            if self.operator not in ('+', '-', '*', '/', '^', 'sq', '%'): # Завд №4 + №9
                 print("Помилка: Невідомий оператор.")
                 return
-            if self.operator in ('+', '-', '*', '/', '^', '√', '%'):
-                if self.operator != '√':
+            if self.operator in ('+', '-', '*', '/', '^', 'sq', '%'):
+                if self.operator != 'sq':
                     self.num2 = float(input("Введіть друге число: "))
                 else:
                     self.num2 = None
@@ -44,7 +44,7 @@ class Calculator: #Завд №1
                             return
                     case '^':
                         result = num1 ** num2
-                    case '√':
+                    case 'sq':
                         result = math.sqrt(num1)
                     case '%':
                         result = num1 % num2

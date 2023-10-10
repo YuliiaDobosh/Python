@@ -1,8 +1,5 @@
 import math
-
-class Program: 
-    def run(self): ##поліморфізм ми його перевизначаємо 
-        pass
+from program import Program
 
 class Calculator(Program ): ##наслідування
     def __init__(self):
@@ -57,7 +54,3 @@ class Calculator(Program ): ##наслідування
             choice = input("Бажаєте продовжити (так/ні)? ")
             if choice.lower() != 'так':
                 break
-
-if __name__ == "__main__":
-    calculator: Program = Calculator()
-    calculator.run()
