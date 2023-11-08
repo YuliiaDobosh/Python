@@ -9,7 +9,7 @@ class Circle(Shape):
         self.radius = radius
         super().__init__(center_x - radius, center_y - radius, center_x + radius, center_y + radius, color, symbol)
 
-    def display(self, graphic: Graphic):
+    def load(self, graphic: Graphic):
         # Check each point in the bounding box of the circle
         for y in range(self.y1, self.y2 + 1):
             # Calculate the leftmost and rightmost x-coordinates for the current y-coordinate

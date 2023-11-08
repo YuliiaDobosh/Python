@@ -12,5 +12,5 @@ class Shape(ABC):
         super().__init__()
 
     @abstractmethod
-    def display(self, graphic: Graphic):
+    def load(self, graphic: Graphic):
         pass

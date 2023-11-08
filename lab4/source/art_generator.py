@@ -42,7 +42,7 @@ class ArtGenerate(ArtGenerate):
         while True:
             shape = self.generate_shape()
             if shape:
-                shape.display(self.graphic)
+                shape.load(self.graphic)
                 self.graphic.render()
                 self.screens.append(self.graphic.buffer)
 
@@ -58,7 +58,7 @@ class ArtGenerate(ArtGenerate):
             
             save_art_prompt = "Would you like to save art? (yes/no)"
             if self.input_handler.yes_or_no(save_art_prompt):
-                self.file_saver.save_to_file(art, )
+                self.file_saver.save_to_file(art, "art.txt")
 
             continue_prompt = "Would you like to generate another art? (yes/no)"
             if not self.input_handler.yes_or_no(continue_prompt):
