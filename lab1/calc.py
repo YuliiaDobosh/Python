@@ -65,5 +65,10 @@ class Calculator: #Завд №1
                 break
 
 # Створюємо об'єкт класу Calculator і запускаємо програму
-calc = Calculator()
-calc.run()
+
+def main():
+    calc = Calculator()
+    calc.run()
+
+if __name__ == '__main__':
+    main()

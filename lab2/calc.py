@@ -1,5 +1,5 @@
 import math
-from program import Program
+from .program import Program
 
 class Calculator(Program ): ##наслідування
     def __init__(self):
