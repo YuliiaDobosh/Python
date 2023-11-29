@@ -11,6 +11,8 @@ import lab4.main
 import lab5.main
 import lab6.main
 import lab7.main
+import lab8.main
+
 
 menu = ConsoleMenu("Runner of labs")
 menu.append_item(FunctionItem("Simple Calculator", lab1.calc.main))
@@ -20,5 +22,6 @@ menu.append_item(FunctionItem("2D ASCII Art(no libraries)", lab4.main.main))
 menu.append_item(FunctionItem("3D ASCII Arts", lab5.main.main))
 menu.append_item(FunctionItem("Unit tests of calculator", lab6.main.main))
 menu.append_item(FunctionItem("API", lab7.main.main))
+menu.append_item(FunctionItem("CSV", lab8.main.main))
 
 menu.show()

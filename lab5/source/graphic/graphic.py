@@ -40,45 +40,7 @@ class Graphic():
     def add_figure(self, figure: Figure) -> None:
         self.figures.append(figure)
 
-    def __draw_line(self, start, end, symbol, color):
-        # Bresenham's Line Algorithm
-        # Convert start and end points from Point2D to integers for grid plotting
-        x1, y1 = int(start.x), int(start.y)
-        x2, y2 = int(end.x), int(end.y)
-        dx = x2 - x1
-        dy = y2 - y1
-
-        x, y = x1, y1
-        # Determine the direction to step
-        xi = 1 if dx > 0 else -1
-        yi = 1 if dy > 0 else -1
-        dx, dy = abs(dx), abs(dy)
-
-        # Draw initial point
-        self.__draw_point(Point2D(x, y), symbol, color)
-
-        # Plot the line
-        if dx > dy:
-            p = 2 * dy - dx
-            while x != x2:
-                x += xi
-                if p < 0:
-                    p += 2 * dy
-                else:
-                    y += yi
-                    p += 2 * (dy - dx)
-                self.__draw_point(Point2D(x, y), symbol, color)
-        else:
-            p = 2 * dx - dy
-            while y != y2:
-                y += yi
-                if p < 0:
-                    p += 2 * dx
-                else:
-                    x += xi
-                    p += 2 * (dx - dy)
-                self.__draw_point(Point2D(x, y), symbol, color)
-
+    
     def __draw_point(self, point: Point2D, symbol: str, color) -> None:
         if 0 <= point.x < self.width and 0 <= point.y < self.height:
             if point.x != self.width - 1 and point.y != self.height - 1: 
